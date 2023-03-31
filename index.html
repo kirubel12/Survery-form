@@ -10,89 +10,81 @@
 </head>
 
 <body class="">
-  <h1 id="title" class="">freeCodeCamp Survey Form</h1>
-  <p id="description" class=" ">Thank you for taking the time to help us improve the
-    platform</p>
-  <main class="">
-    <form id="survey-form">
-      <div>
-        <label for="name-label">Name</label>
-        <!-- <input type="text" id="name-label" > -->
-        <input type="text" id="name-label" placeholder="Type Your Name" class="" required />
-      </div>
-      <div>
-        <label for="email-label">Email</label>
-        <!-- <input type="email" id="email-label" required> -->
-        <input type="text" id="email-label" placeholder="Type Your Email" class="" required />
-      </div>
-      <div>
-        <label for="number-label">Age (optional)</label>
-        <!-- <input type="number" id="number-label"> -->
-        <input type="number" id="number-label" placeholder="Type Your Name" class="" required />
+  <h1 id="title">freeCodeCamp Survey Form</h1>
+  <p id="description">Feel free to submit your opinion</p>
+  <form id="survey-form" action="">
+    <label for="name" id="name-label">Name</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+    <label for="email" id="email-label">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    <label for="number" id="number-label">Phone Number </label><br>
+    <input type="number" id="number" name="number-label" min="10" max="99" placeholder="10" required><br>
+    <label for="opt">Which option best describes your current role?</label><br>
+    <select name="opt" id="dropdown">
+      <option value="">Select current role</option>
+      <option value="fjob">Full Time Job</option>
+      <option value="flearner">Full Time Learner</option>
+    </select><br>
+    <label for="email-label">Would you recommend freeCodeCamp to a friend?</label><br>
 
-      </div>
-      <div>
-        <label for="dropdown">Which option best describes your current role?</label>
-        <select class="" name="dropdown" id="dropdown">
-          <option value="">select current role</option>
-          <option value="student">Student</option>
-          <option value="full-time-job">Full Time Job</option>
-        </select>
-      </div>
-      <div>
-        <label for="radio-button">Would you recommend freeCodeCamp to a friend?</label>
+    <table>
+      <tr>
+        <td>
+          <input type="radio" name="recom" value="recom" checked>
+        </td>
+        <td>
+          <label for="recom">Definitely</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td> <input type="radio" name="recom" value="recom">
+        </td>
+        <td> <label for="recom">May be</label><br> </td>
+      </tr>
 
-        <!-- <input type="radio" id="defineltly" value="Definitely" name="Definitely"> -->
-        <input type="radio" id="defineltly" class="" />
-        <label for="radio">Definitely</label>
-
-        <!-- <input type="radio" name="Maybe"> -->
-        <input type="radio" id="defineltly" name="Maybe" class="" />
-        <label for="radio">Maybe</label>
-
-        <!-- <input type="radio" name="Not sure"> -->
-        <input type="radio" name="Not sure" class="" />
-        <label for="radio">Not Sure</label>
-
-      </div>
-      <div>
-        <label for="dropdown">What is your favorite feature of freeCodeCamp?</label>
-        <select class="" name="dropdown2" id="dropdown">
-          <option value="">select an option</option>
-          <option value="challenges">challenges</option>
-          <option value="Projects">Projects</option>
-        </select>
-      </div>
-      <div>
-        <p>What would you like to see improved? (Check all that apply)</p>
-        <!-- <input type="checkbox" id="frontend-projects"> -->
-        <input type="checkbox" id="frontend-projects" class="" />
-        <label for="frontend-projects">Front-end Projects</label>
-
-        <!-- <input type="checkbox" id="backend-projects"> -->
-        <input type="checkbox" id="backend-projects" class="" />
-        <label for="backend-projects">Back-end Projects</label>
-
-        <!-- <input type="checkbox" id="data-visualization"> -->
-        <input type="checkbox" id="data-visualization" class="" />
-        <label for="data-visualization">Data visualization</label>
-
-        <!-- <input type="checkbox" id="Challenges"> -->
-        <input type="checkbox" id="Challenges" class="" />
-        <label for="frontend-projects">Challenges</label>
-
-      </div>
-      <div>
-        <label for="comment">Any comments or suggestions?</label>
-        <textarea class="textarea" name="comment" id="comment" cols="30" rows="10"></textarea>
-      </div>
-      <div>
-        <button class="" type="submit">Submit</button>
-      </div>
-    </form>
+      <tr>
+        <td> <input type="radio" name="recom" value="recom">
+        </td>
+        <td> <label for="recom">Not Sure</label><br> </td>
+      </tr>
+    </table>
 
 
-  </main>
+
+    <label for="imp">What would you like to see improved? (Check all that apply)</label><br>
+    <table>
+      <tr>
+        <td>
+          <input type="checkbox" name="imp" value="imp">
+        </td>
+        <td>
+          <label for="imp">Front-End Projects</label><br>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="checkbox" name="imp" value="imp">
+        </td>
+        <td>
+          <label for="imp">Back-End Projects</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="imp" value="imp">
+        </td>
+        <td>
+          <label for="imp">Data Visualization</label><br>
+        </td>
+      </tr>
+    </table>
+    <label for="com">Add comments or suggestions?</label><br>
+    <textarea id="comments" name="comments" rows="5" cols="33" placeholder="Your comment are valuable">
+
+  </textarea><br>
+    <input type="submit" id="submit" value="Submit">
+  </form>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <script src="js/index.js"></script>
 
